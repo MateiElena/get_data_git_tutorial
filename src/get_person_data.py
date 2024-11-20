@@ -21,6 +21,12 @@ def save_data(file, person_data):
     with open(file, "w") as fw:
         fw.write(person_data)
 
+def read_data(file):
+    """Return a list with all rows from file"""
+    with open(file, "r") as fr:
+        content = fr.readlines()    #returneaza o lista
+    return content
+
 
 if __name__ == "__main__":
     try:
