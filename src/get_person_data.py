@@ -1,5 +1,6 @@
 """Get person data"""
-from sysconfig import get_path
+
+import pandas as pd
 
 DATA = {
     111: {
@@ -28,6 +29,13 @@ def read_data(file):
     with open(file, "r") as fr:
         content = fr.readlines()    #returneaza o lista
     return content
+
+
+
+def read_csv_data(file) -> pd.DataFrame:
+    """return data from csv"""
+    return pd.read_csv(file)
+
 
 if __name__ == "__main__":
     try:
